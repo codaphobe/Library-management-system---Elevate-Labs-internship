@@ -16,21 +16,21 @@ Key goals include practicing:
 ### Implementation :
 
 ---
-> **User Fields:**
+**User Fields:**
 > - `name`
 > - `email`
 > - ArrayList<Books> `borrowedBooks`
 > - double `due` 
 > - ArrayList<Checkout> `checkout`
 
->**Books Fields:**
+**Books Fields:**
 > - String `bookId`
 > - String `bookName`
 > - String `bookAuthor`
 > - boolean `isAvailable`
 
 
-> **Checkout Fields:**
+**Checkout Fields:**
 > - User `user`
 > - String `checkoutId`
 > - String `borrowedBook`
