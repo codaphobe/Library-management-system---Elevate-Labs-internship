@@ -13,43 +13,41 @@ Key goals include practicing:
 
 ### Implementation :
 
-**User Fields:**
-- `name`
-- `email`
-- ArrayList<Books> `borrowedBooks`
-- double `due` 
-- ArrayList<Checkout> `checkout`
+> **User Fields:**
+> - `name`
+> - `email`
+> - ArrayList<Books> `borrowedBooks`
+> - double `due` 
+> - ArrayList<Checkout> `checkout`
 
-**Books Fields:**
+>**Books Fields:**
+> - String `bookId`
+> - String `bookName`
+> - String `bookAuthor`
+> - boolean `isAvailable`
 
-- String `bookId`
-- String `bookName`
-- String `bookAuthor`
-- boolean `isAvailable`
 
-
-**Checkout Fields:**
-
-- User `user`
-- String `checkoutId`
-- String `borrowedBook`
-- String `borrowedDate`
-- String `endDate`
-- double `rent`
+> **Checkout Fields:**
+> - User `user`
+> - String `checkoutId`
+> - String `borrowedBook`
+> - String `borrowedDate`
+> - String `endDate`
+> - double `rent`
 
 ### Logic Implementation:
 
-**UserManagement :**
+>**UserManagement :**
 - Maintains a list of users (`ArrayList<User>`)
 - Implements CRUD operations
 - Checks for duplicate users by email
 
-**BooksManagement :**
+>**BooksManagement :**
 - Maintains a list of books (`ArrayList<Book>`)
 - Implements CRUD operations
 - Checks for duplicate books by book ID
 
-**CheckManagement :**
+>**CheckoutManagement :**
 
 - Handles checkout and return of books
 - Updates both User and Books objects:
@@ -62,11 +60,7 @@ Key goals include practicing:
 ### Problems Encountered :
 
 - During development, one major problem encountered was a StackOverflowError caused by recursive printing between User and Checkout objects.
-
 - Each User holds a list of Checkout objects.
-
 - Each Checkout holds a reference to the User.
-
 - Calling toString() on either object led to infinite recursion.
-
 > Solution: Modified the toString() methods to print only identifiers or counts instead of full nested objects.
