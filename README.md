@@ -1,6 +1,8 @@
 ## CLI based Library Management System
 
 ### Objectives :
+
+---
 The objective of this project is to implement a Command-Line Interface (CLI) Library Management System in Java.
 The system allows the user to manage library users, books, and checkout transactions using object-oriented principles.
 
@@ -13,6 +15,7 @@ Key goals include practicing:
 
 ### Implementation :
 
+---
 > **User Fields:**
 > - `name`
 > - `email`
@@ -37,17 +40,18 @@ Key goals include practicing:
 
 ### Logic Implementation:
 
->**UserManagement :**
+---
+**UserManagement :**
 - Maintains a list of users (`ArrayList<User>`)
 - Implements CRUD operations
 - Checks for duplicate users by email
 
->**BooksManagement :**
+**BooksManagement :**
 - Maintains a list of books (`ArrayList<Book>`)
 - Implements CRUD operations
 - Checks for duplicate books by book ID
 
->**CheckoutManagement :**
+**CheckoutManagement :**
 
 - Handles checkout and return of books
 - Updates both User and Books objects:
@@ -59,6 +63,7 @@ Key goals include practicing:
 
 ### Problems Encountered :
 
+---
 - During development, one major problem encountered was a StackOverflowError caused by recursive printing between User and Checkout objects.
 - Each User holds a list of Checkout objects.
 - Each Checkout holds a reference to the User.
